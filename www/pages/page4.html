@@ -1,0 +1,29 @@
+<ion-view view-title="Parent Monitoring System">
+  <ion-content class="padding" ng-controller="alogininctrl">
+    <div class="list card">
+      <div class="item item-divider"></div>
+      <div class="item item-body">
+        <button class="button button-positive" ui-sref="page1">Back From Admin</button>
+      </div>
+    </div>
+    <form>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Username</span>
+                        <input type="text" name="loginusername"  placeholder="enter username" ng-model="data.loginusername">
+                    </label>
+                      <label class="item item-input item-stacked-label">
+                        <span class="input-label">password</span>
+                        <input type="password" name="loginpassword" placeholder="enter password" ng-model="data.loginpassword">
+                    </label>
+ 
+                    <input ng-click="loginsubmit()" class="button button-block button-positive" type="submit"  value="SignIn" name="loginsubmit" >                    
+                </form>
+                <div class="card">
+                    <div class="item item-text-wrap">
+                    
+                        Response: <b ng-bind="found"></b>
+                    </div>
+                </div>
+ 
+  </ion-content>
+</ion-view>

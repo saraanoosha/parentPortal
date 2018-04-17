@@ -1,0 +1,64 @@
+<ion-view view-title="Parent Monitoring System">
+  <ion-content class="padding" ng-controller="addParentController">
+    <div class="list card">
+      <div class="item item-divider"></div>
+      <div class="item item-body">
+        <button class="button button-positive" ng-click="addParentBackButton()">Back</button>
+      </div>
+    </div>
+    <form method="POST" enctype="multipart/form-data">
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">First Name</span>
+                        <input type="text" name="parentFirstname"  placeholder="enter First Name" ng-model="data.parentFirstname">
+                    </label>
+                      <label class="item item-input item-stacked-label">
+                        <span class="input-label">Last Name</span>
+                        <input type="text" name="parentLastname" placeholder="enter Last Name" ng-model="data.parentLastname">
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Email</span>
+                        <input type="text" name="parentEmail" placeholder="abc@xyz.com" ng-model="data.parentEmail">
+                    </label>
+                      <label class="item item-input item-stacked-label">
+                        <span class="input-label">Password</span>
+                        <input type="password" name="parentPassword" placeholder="enter Password" ng-model="data.parentPassword">
+                    </label>
+                     <label class="item item-input item-stacked-label">
+                        <span class="input-label">User Name</span>
+                        <input type="text" name="parentUsername" placeholder="enter Parent's User Name" ng-model="data.parentUsername">
+                     </label>
+                     <label class="item item-input item-stacked-label">
+                        <span class="input-label">CNIC</span>
+                        <input type="text" name="parentCNIC" placeholder="enter Parent's CNIC" ng-model="data.parentCNIC">
+                     </label>
+                     <label class="item item-input item-stacked-label">
+                        <span class="input-label">Address</span>
+                        <input type="text" name="parentAddress" placeholder="enter Parent's Permanent Address" ng-model="data.parentAddress">
+                     </label>
+                     <label class="item item-input item-stacked-label">
+                        <span class="input-label">Contact Number</span>
+                        <input type="text" name="parentContactNumber" placeholder="enter Parent's Contact Number" ng-model="data.parentContactNumber">
+                     </label>
+                     <!-- <label class="item item-input item-stacked-label">
+                        <span class="input-label">image</span>
+                        <input type="file" name="parentImage" ng-model="data.parentImage">
+                     </label> -->
+ 
+ 
+ 
+ 
+                    <input ng-click="addParentSubmit()" class="button button-block button-positive" type="submit"  value="SignIn" name="loginsubmit" >                    
+                </form>
+                <div class="card">
+                    <div class="item item-text-wrap">
+                    
+                        Response: <b ng-bind="found"></b>
+                    </div>
+                </div>
+                <ion-infinite-scroll
+                    on-infinite="loadMore()"
+                    distance="1%">
+                </ion-infinite-scroll>
+ 
+  </ion-content>
+</ion-view>

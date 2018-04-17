@@ -1,0 +1,57 @@
+<ion-view view-title="Parent Monitoring System" ng-controller="editParentController">
+  <ion-content class="padding">
+    <div class="list card">
+      <div class="item item-divider"></div>
+      <div class="item item-body">
+        <button class="button button-positive" ng-click="editParentBackButton()">Back from edit parent</button>
+      </div>
+    </div>
+    <form method="POST" enctype="multipart/form-data">
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">First Name</span>
+                        <input type="text" name="editparentFirstname"  placeholder="enter First Name" ng-model="data.editparentFirstname">
+                    </label>
+                      <label class="item item-input item-stacked-label">
+                        <span class="input-label">Last Name</span>
+                        <input type="text" name="editparentLastname" placeholder="enter Last Name" ng-model="data.editparentLastname">
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Email</span>
+                        <input type="text" name="editparentEmail" placeholder="abc@xyz.com" ng-model="data.editparentEmail">
+                    </label>
+                      <label class="item item-input item-stacked-label">
+                        <span class="input-label">Password</span>
+                        <input type="password" name="editparentPassword" placeholder="enter Password" ng-model="data.editparentPassword">
+                    </label>
+                     <label class="item item-input item-stacked-label">
+                        <span class="input-label">User Name</span>
+                        <input type="text" name="editparentUsername" placeholder="enter Parent's User Name" ng-model="data.editparentUsername">
+                     </label>
+                     <label class="item item-input item-stacked-label">
+                        <span class="input-label">CNIC</span>
+                        <input type="text" name="editparentCNIC" placeholder="enter Parent's CNIC" ng-model="data.editparentCNIC">
+                     </label>
+                     <label class="item item-input item-stacked-label">
+                        <span class="input-label">Address</span>
+                        <input type="text" name="editparentAddress" placeholder="enter Parent's Permanent Address" ng-model="data.editparentAddress">
+                     </label>
+                     <label class="item item-input item-stacked-label">
+                        <span class="input-label">Contact Number</span>
+                        <input type="text" name="editparentContactNumber" placeholder="enter Parent's Contact Number" ng-model="data.editparentContactNumber">
+                     </label>
+                   
+                    <input ng-click="editParentSubmit()" class="button button-block button-positive" type="submit"  value="Update" name="editParentSubmit" >                    
+                </form>
+                <div class="card">
+                    <div class="item item-text-wrap">
+                    
+                        Response: <b ng-bind="found"></b>
+                    </div>
+                </div>
+                <ion-infinite-scroll
+                    on-infinite="loadMore()"
+                    distance="1%">
+                </ion-infinite-scroll>
+ 
+  </ion-content>
+</ion-view>
