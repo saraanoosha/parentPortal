@@ -39,7 +39,7 @@ App.controller('addParentController', function($scope, $http,$state) {
             else
               {
               
-              alert("User doesn't exist");
+              alert("try again");
               
                }
 
