@@ -26,6 +26,8 @@ var App=angular.module('starter',  ['ionic',"starter.controllers"])
 })
 .config(function($stateProvider,$urlRouterProvider){
   $stateProvider
+  
+ 
 
 
  .state('adminhome.teacher', {
@@ -65,7 +67,62 @@ var App=angular.module('starter',  ['ionic',"starter.controllers"])
                   
                 
             })
+        
 
+    
+    
+    
+    
+        .state('teacherhome', {
+      url: "/teacherhome",
+  
+      templateUrl: "pages/teacherpages/teacherhome.html",
+    
+    })
+    
+      .state('teacherhome.profile', {
+                url: '/profile',
+                views:{
+                  'menuContent':{
+                         templateUrl: 'pages/teacherpages/profile.html'
+                  }
+                }
+           
+                        
+                  
+                
+            })
+    
+    
+      .state('teacherhome.createtest', {
+                url: '/createtest',
+                views:{
+                  'menuContent':{
+                         templateUrl: 'pages/teacherpages/createtest.html'
+                  }
+                }
+           
+                        
+                  
+                
+            })
+    
+       .state('teacherhome.marks', {
+                url: '/marks',
+                views:{
+                  'menuContent':{
+                         templateUrl: 'pages/teacherpages/marks.html'
+                  }
+                }
+           
+                        
+                  
+                
+            })
+    
+    
+   
+    
 
 
 
@@ -74,11 +131,7 @@ var App=angular.module('starter',  ['ionic',"starter.controllers"])
     cache:false,
     templateUrl: 'pages/page1.html'
 })
-.state('page2', {
-    url: "/page2",
-    cache:false,
-    templateUrl: 'pages/page2.html'
-}) 
+
 .state('page3', {
     url: "/page3",
     cache:false,
@@ -109,5 +162,36 @@ var App=angular.module('starter',  ['ionic',"starter.controllers"])
   cache:false,
   templateUrl:'pages/adminpages/editParent.html'
 })
+    
+    
+    
+ 
+    
+//    .state('teacherhome', {
+//    url: "/teacherhome",
+//    cache:false,
+//    templateUrl: 'pages/teacherpages/teacherhome.html'
+//}) 
+    
+    .state('teacherlogin', {
+    url: "/Teacherlogin",
+    cache:false,
+    templateUrl: 'pages/teacherpages/Teacherlogin.html'
+}) 
+    
+     .state('test', {
+    url: "/test",
+    cache:false,
+    templateUrl: 'pages/teacherpages/test.html'
+})
+//  .state('teacherprofile', {
+//    url: "/teacherprofile",
+//    cache:false,
+//    templateUrl: 'pages/teacherpages/Teacherprofile.html'
+//})
+    
+
+
+    
 $urlRouterProvider.otherwise('/page1'); 
 });
