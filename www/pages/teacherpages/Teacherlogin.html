@@ -1,0 +1,29 @@
+<ion-view view-title="Parent Monitoring System">
+  <ion-content class="padding" ng-controller="Teacherlogin">
+    <div class="list card">
+      <div class="item item-divider"></div>
+      <div class="item item-body">
+        <button class="button button-assertive" ui-sref="page1">Back From Teacher</button>
+      </div>
+    </div>
+     <form>
+    <div class="list">
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Username</span>
+    <input type="text" placeholder="John"  ng-model="tusername">
+  </label>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Password</span>
+    <input type="password" placeholder="******" ng-model="tpassword">
+  </label>
+<button type="submit" ng-click="Teacherlogin()" class="button button-full button-assertive">
+  Login
+</button>
+</div>
+      </form>
+ 
+
+              
+ 
+  </ion-content>
+</ion-view>
