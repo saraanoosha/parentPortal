@@ -1,34 +1,35 @@
 <ion-view view-title="Parent monitoring System">
-  <ion-content class="padding">
+  <ion-content class="padding" ng-controller="profilecontroller">
  
   
     
    <div class="card">
 
    <a class="item item-thumbnail-left" href="#">
-      <img src="cover.jpg">
-      <h2>Ali Imran</h2>
-      <p>Assistant professor</p>
+     <img src="/www/img/profile.jpg"/>
+       <h2><b>{{profile.name}}</b></h2>
+          <p>Assistant Professor</p>
     </a>
     
     
     <div class="list">
 
   <div class="item item-divider">
-    Basic information
+      <b>Basic information</b>
   </div>
 
   <a class="item" href="#">
-   Firstname
+ <b>Name:</b>  {{profile.name}}
   </a>
-   <a class="item" href="#">
-  Surname
+  
+    <a class="item" href="#">
+ <b>Email:</b> {{profile.email}}
   </a>
     <a class="item" href="#">
-  Email
+  <b>Address:</b> {{profile.address}}
   </a>
-    <a class="item" href="#">
-  Address
+  <a class="item" href="#">
+<b>Phone:</b> {{profile.phone}}
   </a>
    
 

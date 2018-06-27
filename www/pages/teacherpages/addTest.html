@@ -1,0 +1,57 @@
+<ion-view view-title="Test Creation">
+  <ion-content class="padding" ng-controller="AddTest">
+ 
+  
+  
+  <div class="list">
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Test Name</span>
+    <input type="text" placeholder="quiz1" ng-model="testname">
+  </label>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Total marks</span>
+    <input type="text" placeholder="Total Marks" ng-model="marks">
+  </label>
+ <label class = "item item-input item-select">
+   <div class = "input-label">
+      Batch
+   </div>
+	
+   <select ng-model="selectedbatch" ng-change="getbatch()">
+      <option selected>1st</option>
+      <option>2nd</option>
+      <option>3rd</option>
+      <option>4th</option>
+   </select>
+</label>
+<label class = "item item-input item-select">
+   <div class = "input-label">
+      Section
+   </div>
+	
+   <select ng-model="selectedsection" ng-change="getsection()">
+      <option selected>A</option>
+      <option>B</option>
+      <option>C</option>
+      
+   </select>
+</label>
+
+<label class = "item item-input item-select">
+   <div class = "input-label">
+      Course
+   </div>
+	
+   <select ng-model="selectedcourse" >
+      <option ng-repeat="index in course">{{course[$index]}}</option>
+     
+      
+   </select>
+</label>
+</div>
+  <button type="submit" ng-click="Addtest()" class="button button-full button-assertive">
+  Create
+</button>
+
+  </ion-content>
+</ion-view> 
