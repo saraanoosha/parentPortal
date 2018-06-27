@@ -1,0 +1,56 @@
+<ion-view view-title="Parent Monitoring System">
+  <ion-content class="padding" ng-controller="editTeacherController">
+    <div class="list card">
+      <div class="item item-divider"></div>
+      <div class="item item-body">
+        <button class="button button-positive" ng-click="editTeachertBackButton()">Back</button>
+      </div>
+    </div>
+    <form method="POST">
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Name</span>
+                        <input type="text" name="teacherName"  placeholder="enter First Name" ng-model="data.teacherName">
+                    </label>
+                     
+                    
+                     <label class="item item-input item-stacked-label">
+                        <span class="input-label">Address</span>
+                        <input type="text" name="teacherAddress" placeholder="enter  Permanent Address" ng-model="data.teacherAddress">
+                     </label>
+         
+
+                        <label class="item item-input item-stacked-label">
+                        <span class="input-label">Teacher's Cnic No</span>
+                        <input type="text" name="TeacherCnic" placeholder="enter teachers's CNIC "ng-model="data.teacherCnic">
+                     </label>
+                     <label class="item item-input item-stacked-label">
+                        <span class="input-label">Email address</span>
+                        <input type="text" name="teacherEmailAddress" placeholder="enter Email address "ng-model="data.TeacherEmail">
+                     </label>
+                     <label class="item item-input item-stacked-label">
+                        <span class="input-label">Password</span>
+                        <input type="text" name="Password" placeholder="enter Password "ng-model="data.password">
+                     </label>
+                     <label class="item item-input item-stacked-label">
+                        <span class="input-label">Enter phone Number</span>
+                        <input type="text" name="phoneNumber" placeholder="enter phone number "ng-model="data.phone">
+                     </label>
+ 
+ 
+ 
+ 
+                    <input ng-click="editTeacherSubmit()" class="button button-block button-positive" type="submit"  value="Update" name="loginsubmit" >                    
+                </form>
+                <div class="card">
+                    <div class="item item-text-wrap">
+                    
+                        Response: <b ng-bind="found"></b>
+                    </div>
+                </div>
+                <ion-infinite-scroll
+                    on-infinite="loadMore()"
+                    distance="1%">
+                </ion-infinite-scroll>
+ 
+  </ion-content>
+</ion-view>

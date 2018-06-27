@@ -1,14 +1,17 @@
 
-<ion-view view-title="Parent Monitoring System" ">
+<ion-view view-title="Parent Monitoring System" ng-controller="teaacherController">
   <ion-content class="padding">
-   <button  id="addbutton" class="button button-full button-positive">
+   <button ng-click="addTeacer()"  id="addbutton" class="button button-full button-positive">
   Add Teacher
 </button>
-<button class="button button-full button-positive">
+<button ng-click="editTeacher()" class="button button-full button-positive">
   Edit Teacher
 </button>
-<button  class="button button-full button-positive">
+<button ng-click="deleteTeacher()"  class="button button-full button-positive">
   Remove Teacher
+</button>
+<button ng-click="assignCourseAndSection()" class="button button-full button-positive">
+Assign Course And Section
 </button>
   </ion-content>
 </ion-view>

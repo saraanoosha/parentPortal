@@ -32,16 +32,21 @@ App.controller('addParentController', function($scope, $http,$state) {
           image : $scope.data.parentImage}).then(function (res){
             
                $scope.found = res.data;
-           if($scope.found == "yes")
+           if($scope.found == "yup")
               {
-             alert("User added");
-               }
-            else
+            alert("added");
+              }
+              if($scope.found != "yup")
               {
+            alert("added");
+              }
+            // else
+            //   {
               
-              alert("try again");
+            //   alert("User not added");
               
-               }
+            //    }
+
 
           });
       };

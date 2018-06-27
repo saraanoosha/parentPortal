@@ -1,0 +1,27 @@
+<ion-view view-title="Parent Monitoring System">
+  <ion-content class="padding" ng-controller="showCourse">
+    <div class="list card">
+      <div class="item item-divider"></div>
+      <div class="item item-body">
+        <button class="button button-positive" ng-click="selectCourseBack()">Back</button>
+      </div>
+    </div>
+    <form method="POST">
+                   <label class="item item-input item-select">
+
+                      <div class="input-label">Course</div>
+                        <select ng-model="data.courseid" ng-options="x.course_id as x.course_name for x in courseFound"> 
+                          <option value=""></option>
+                        </select>
+    </label>
+                     
+                    <input ng-click="goResult()" class="button button-block button-positive" type="submit"  value="Result" name="loginsubmit" >                    
+                </form>
+      
+                <ion-infinite-scroll
+                    on-infinite="loadMore()"
+                    distance="1%">
+                </ion-infinite-scroll>
+ 
+  </ion-content>
+</ion-view>
