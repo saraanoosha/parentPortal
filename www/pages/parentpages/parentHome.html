@@ -17,26 +17,23 @@
       <h1 class="title">Select Any</h1>
     </ion-header-bar>
     <ion-content>
-      <ion-list ng-controller="adminLogout">
-        <ion-item menu-close ng-click="logoutfromAdminHomePage()">
+      <ion-list ng-controller="parentLogout">
+        <ion-item menu-close ng-click="logoutfromParentHomePage()">
           Logout
         </ion-item>
-        <ion-item menu-close href="#/adminhome/parent">
-          Parent
+        <ion-item menu-close href="#/parenthome/checkresult">
+          Check Result
         </ion-item>
-        <ion-item menu-close href="#/adminhome/teacher">
-          Teacher
+        <ion-item menu-close href="#/parenthome/checkattendance">
+          Check Attendance
         </ion-item>
-        <ion-item menu-close href="#/adminhome/student">
-          Student
+        <ion-item menu-close href="#/parenthome/checkchallan">
+          See Challan 
         </ion-item>
-        <ion-item menu-close href="#/adminhome/course">
-          Course
+        <ion-item menu-close href="#/parenthome/checklocation">
+          See Locations 
         </ion-item>
-        <ion-item menu-close href="#/adminhome/challan">
-          Challan
-        </ion-item>
-        
+              
       </ion-list>
     </ion-content>
   </ion-side-menu>

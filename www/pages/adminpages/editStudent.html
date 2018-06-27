@@ -1,0 +1,96 @@
+<ion-view view-title="Parent Monitoring System">
+  <ion-content class="padding" ng-controller="editStudentController">
+    <div class="list card">
+      <div class="item item-divider"></div>
+      <div class="item item-body">
+        <button class="button button-positive" ng-click="editStudentBackButton()">Back From edit Student</button>
+      </div>
+    </div>
+    <form method="POST">
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">First Name</span>
+                        <input type="text" name="StudentFirstname"  placeholder="enter First Name" ng-model="data.StudentFirstname">
+                    </label>
+                      <label class="item item-input item-stacked-label">
+                        <span class="input-label">Last Name</span>
+                        <input type="text" name="studentLastname" placeholder="enter Last Name" ng-model="data.studentLastname">
+                    </label>
+                    
+                      
+                     <label class="item item-input item-stacked-label">
+                        <span class="input-label">R0ll Number</span>
+                        <input type="text" name="studentRollNo" placeholder="enter Student's roll No." ng-model="data.studentRollNo">
+                     </label>
+                     <label class="item item-input item-stacked-label">
+                        <span class="input-label">Address</span>
+                        <input type="text" name="studentAddress" placeholder="enter Student's Permanent Address" ng-model="data.studentAddress">
+                     </label>
+                     
+                    <label class="item item-input item-select">
+                        <div class="input-label">Gender</div>
+                        <select ng-model="data.genderSelect">
+                          <option option="male">Male</option>
+                          <option option="female">Female</option>
+                        </select>
+                     </label>
+                      <label class="item item-input item-select">
+                        <span class="input-label">Date Of Birth</span>
+                        <ion-list>
+                          <ion-item class="item-input">
+                            <label class="item-input">
+                              <span class="input-label">Date</span>
+                              <input type="date" ng-model="data.dueDate">
+                                </label>
+                              </ion-item>
+                            </ion-list>
+
+                                  <h3>{{data.dueDate | date: "MM-dd-yyyy"}}</h3>
+                      </label>
+
+                  
+                     <label class="item item-input item-select">
+                        <div class="input-label">Batch</div>
+                        <select ng-model="data.batch">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                        </select>
+                      </label>
+                      <label class="item item-input item-select">
+                      <div class="input-label">Section</div>
+                        <select ng-model="data.section">
+                          <option value="1">A</option>
+                          <option value="2">B</option>
+                          <option value="3">C</option>
+                          <option value="4">D</option>
+                        </select>
+                      </label>
+
+                        <label class="item item-input item-stacked-label">
+                        <span class="input-label">Student's Cnic/ Bay Form Number</span>
+                        <input type="text" name="parentCnic" placeholder="enter Parent's CNIC "ng-model="data.parentCnic">
+                     </label>
+                     <label class="item item-input item-stacked-label">
+                        <span class="input-label">Parent's ID</span>
+                        <input type="text" name="parentID" placeholder="enter Parent's ID "ng-model="data.parentID">
+                     </label>
+ 
+ 
+ 
+ 
+                    <input ng-click="updateStudentSubmit()" class="button button-block button-positive" type="submit"  value="Update" name="loginsubmit" >                    
+                </form>
+                <div class="card">
+                    <div class="item item-text-wrap">
+                    
+                        Response: <b ng-bind="found"></b>
+                    </div>
+                </div>
+                <ion-infinite-scroll
+                    on-infinite="loadMore()"
+                    distance="1%">
+                </ion-infinite-scroll>
+ 
+  </ion-content>
+</ion-view>

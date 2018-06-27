@@ -32,6 +32,7 @@ var App=angular.module('starter',  ['ionic',"starter.controllers"])
 
  .state('adminhome.teacher', {
                 url: '/teacher',
+                cache:false,
                 views:{
                   'menuContent':{
                          templateUrl: 'pages/adminpages/teacher.html'
@@ -42,8 +43,36 @@ var App=angular.module('starter',  ['ionic',"starter.controllers"])
                   
                 
             })
+ .state('adminhome.course', {
+                url: '/course',
+                cache:false,
+                views:{
+                  'menuContent':{
+                         templateUrl: 'pages/adminpages/course.html'
+                  }
+                }
+           
+                        
+                  
+                
+            })
+ .state('adminhome.challan', {
+                url: '/challan',
+                cache:false,
+                views:{
+                  'menuContent':{
+                         templateUrl: 'pages/adminpages/challan.html'
+                  }
+                }
+           
+                        
+                  
+                
+            })
+
  .state('adminhome.parent', {
                 url: '/parent',
+                cache:false,
                 views:{
                   'menuContent':{
                          templateUrl: 'pages/adminpages/parent.html'
@@ -57,15 +86,48 @@ var App=angular.module('starter',  ['ionic',"starter.controllers"])
 
   .state('adminhome.student', {
                 url: '/student',
+                cache:false,
                 views:{
                   'menuContent':{
                          templateUrl: 'pages/adminpages/student.html'
                   }
-                }
-           
-                        
-                  
-                
+                }   
+            })
+  .state('parenthome.attendance', {
+                url: '/checkattendance',
+                cache:false,
+                views:{
+                  'menuContent':{
+                         templateUrl: 'pages/parentpages/checkAttendance.html'
+                  }
+                }   
+            })
+   .state('parenthome.result', {
+                url: '/checkresult',
+                cache:false,
+                views:{
+                  'menuContent':{
+                         templateUrl: 'pages/parentpages/checkResult.html'
+                  }
+                }   
+            })
+    .state('parenthome.challan', {
+                url: '/checkchallan',
+                cache:false,
+                views:{
+                  'menuContent':{
+                         templateUrl: 'pages/parentpages/seeChallan.html'
+                  }
+                }   
+            })
+    .state('parenthome.location', {
+                url: '/checklocation',
+                cache:false,
+                views:{
+                  'menuContent':{
+                         templateUrl: 'pages/parentpages/seeLocations.html'
+                  }
+                }   
             })
         
 
@@ -75,11 +137,17 @@ var App=angular.module('starter',  ['ionic',"starter.controllers"])
     
         .state('teacherhome', {
       url: "/teacherhome",
-  
+      cache:false,
       templateUrl: "pages/teacherpages/teacherhome.html",
     
     })
+        .state('parenthome', {
+      url: "/parenthome",
+      cache:false,
+  
+      templateUrl: "pages/parentpages/parentHome.html",
     
+    })
       .state('teacherhome.profile', {
                 url: '/profile',
                 views:{
@@ -152,6 +220,22 @@ var App=angular.module('starter',  ['ionic',"starter.controllers"])
   cache:false,
   templateUrl:'pages/adminpages/Addparent.html'
 })
+.state('addcourse',{
+  url:"/addcourse",
+  cache:false,
+  templateUrl:'pages/adminpages/addCourse.html'
+})
+.state('issueChallan',{
+  url:"/issueChallan",
+  cache:false,
+  templateUrl:'pages/adminpages/issueChallan.html'
+})
+
+.state('deletecourse',{
+  url:"/deletecourse",
+  cache:false,
+  templateUrl:'pages/adminpages/deleteCourse.html'
+})
 .state('deleteparent',{
   url:"/deleteparent",
   cache:false,
@@ -164,9 +248,41 @@ var App=angular.module('starter',  ['ionic',"starter.controllers"])
 })
     
     
-    
- 
-    
+  .state('addStudent',{
+  url:"/addStudent",
+  cache:false,
+  templateUrl:'pages/adminpages/addStudent.html'
+})  
+  .state('editStudent',{
+  url:"/editStudent",
+  cache:false,
+  templateUrl:'pages/adminpages/editStudent.html'
+})  
+ .state('deleteStudent',{
+  url:"/deleteStudent",
+  cache:false,
+  templateUrl:'pages/adminpages/deleteStudent.html'
+})  
+.state('addteacher',{
+  url:"/addteacher",
+  cache:false,
+  templateUrl:'pages/adminpages/addTeacher.html'
+})
+  .state('assignsectionTeacher',{
+  url:"/assignSection",
+  cache:false,
+  templateUrl:'pages/adminpages/assignCourseAndSection.html'
+}) 
+  .state('editteacher',{
+  url:"/editteacher",
+  cache:false,
+  templateUrl:'pages/adminpages/editTeacher.html'
+})
+  .state('deleteteacher',{
+  url:"/deleteteacher",
+  cache:false,
+  templateUrl:'pages/adminpages/deleteTeacher.html'
+})
 //    .state('teacherhome', {
 //    url: "/teacherhome",
 //    cache:false,
@@ -178,11 +294,27 @@ var App=angular.module('starter',  ['ionic',"starter.controllers"])
     cache:false,
     templateUrl: 'pages/teacherpages/Teacherlogin.html'
 }) 
+
     
      .state('test', {
     url: "/test",
     cache:false,
     templateUrl: 'pages/teacherpages/test.html'
+})
+     .state('challanGo', {
+    url: "/challanGo",
+    cache:false,
+    templateUrl: 'pages/parentpages/studentChallan.html'
+})
+      .state('resultGo', {
+    url: "/resultGo",
+    cache:false,
+    templateUrl: 'pages/parentpages/studentResult.html'
+})
+       .state('courseGo', {
+    url: "/courseGo",
+    cache:false,
+    templateUrl: 'pages/parentpages/courseSelect.html'
 })
 //  .state('teacherprofile', {
 //    url: "/teacherprofile",

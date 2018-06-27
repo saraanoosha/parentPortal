@@ -1,0 +1,62 @@
+<ion-view view-title="Parent Monitoring System">
+  <ion-content class="padding" ng-controller="assignCourseAndSectionController">
+    <div class="list card">
+      <div class="item item-divider"></div>
+      <div class="item item-body">
+        <button class="button button-positive" ng-click="assignCourseAndSectionBackButton()">Back</button>
+      </div>
+    </div>
+    <form method="POST">
+
+       <table style="width:100%">
+  
+  <tr>
+    <td>     <label class="item item-input item-select">
+
+                      <div class="input-label">Course</div>
+                        <select ng-model="data.courseid" ng-options="x.course_code as x.course_name for x in allcoursesfound"> 
+                          <option value=""></option>
+                        </select>
+    </label>
+    </td>
+  </tr>
+    <tr>  
+      <td><label class="item item-input item-select">
+
+                      <div class="input-label">Teacher</div>
+                        <select ng-model="data.teacher" ng-options="x.teacher_cnic as x.teacher_name for x in allteachersfound"> 
+                          <option value=""></option>
+                        </select>
+    </label>
+  </td>
+  </tr>
+  <tr>
+    <td>   <label class="item item-input item-select">
+
+                      <div class="input-label">Section</div>
+                        <select ng-model="data.section" ng-options="x.section_id as x.section_id for x in allsectionsfound"> 
+                          <option value=""></option>
+                        </select>
+    </label>
+  </td>
+  </tr>
+</table> 
+
+                 
+                    
+                     
+                    <input ng-click="assignSubmit()" class="button button-block button-positive" type="submit"  value="Add" name="loginsubmit" >                    
+                </form>
+                <div class="card">
+                    <div class="item item-text-wrap">
+                    
+                        Response: <b ng-bind="found"></b>
+                    </div>
+                </div>
+                <ion-infinite-scroll
+                    on-infinite="loadMore()"
+                    distance="1%">
+                </ion-infinite-scroll>
+ 
+  </ion-content>
+</ion-view>

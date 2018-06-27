@@ -17,16 +17,16 @@ App.controller('editParentController', function($scope, $http,$state) {
           address : $scope.data.editparentAddress, contactno : $scope.data.editparentContactNumber}).then(function (res){
             
                $scope.found = res.data;
-           // if($scope.found == "yes")
-           //    {
-           //   alert("User added");
-           //     }
-           //  else
-           //    {
+           if($scope.found == "yes")
+              {
+             alert("updated");
+               }
+            else
+              {
               
-           //    alert("User doesn't exist");
+              alert("this User doesn't exist");
               
-           //     }
+               }
 
           });
        //  $state.go('adminhome.parent');
