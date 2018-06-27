@@ -7,6 +7,10 @@ var App=angular.module('starter',  ['ionic',"starter.controllers"])
 
 
 
+
+
+
+
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     if(window.cordova && window.cordova.plugins.Keyboard) {
@@ -26,6 +30,7 @@ var App=angular.module('starter',  ['ionic',"starter.controllers"])
 })
 .config(function($stateProvider,$urlRouterProvider){
   $stateProvider
+  
   
  
 
@@ -147,7 +152,23 @@ var App=angular.module('starter',  ['ionic',"starter.controllers"])
   
       templateUrl: "pages/parentpages/parentHome.html",
     
+<<<<<<< HEAD
     })
+=======
+      .state('teacherhome.home', {
+                url: '/home',
+                views:{
+                  'menuContent':{
+                         templateUrl: 'pages/teacherpages/home.html'
+                  }
+                }
+           
+                        
+                  
+                
+            })
+    
+>>>>>>> ca43149d765b5e636f22bc95549565cb5e216944
       .state('teacherhome.profile', {
                 url: '/profile',
                 views:{
@@ -187,6 +208,73 @@ var App=angular.module('starter',  ['ionic',"starter.controllers"])
                   
                 
             })
+    
+      .state('teacherhome.addTest', {
+                url: '/addtest',
+                views:{
+                  'menuContent':{
+                         templateUrl: 'pages/teacherpages/addTest.html'
+                  }
+                }
+           
+                        
+                  
+                
+            })
+    
+     .state('teacherhome.MarksAdd', {
+                url: '/AddMarks',
+                views:{
+                  'menuContent':{
+                         templateUrl: 'pages/teacherpages/MarksAdd.html'
+                  }
+                }
+           
+                        
+                  
+                
+            })
+    
+      .state('teacherhome.Attendencehome', {
+                url: '/Attendence',
+                views:{
+                  'menuContent':{
+                         templateUrl: 'pages/teacherpages/Attendencehome.html'
+                  }
+                }
+           
+                        
+                  
+                
+            })
+    
+       .state('teacherhome.Addattendence', {
+                url: '/AddAttendence',
+                views:{
+                  'menuContent':{
+                         templateUrl: 'pages/teacherpages/Addattendence.html'
+                  }
+                }
+           
+                        
+                  
+                
+            })
+    
+       .state('teacherhome.deletetest', {
+                url: '/delete',
+                views:{
+                  'menuContent':{
+                         templateUrl: 'pages/teacherpages/deletetest.html'
+                  }
+                }
+           
+                        
+                  
+                
+            })
+    
+    
     
     
    
