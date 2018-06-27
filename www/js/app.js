@@ -151,10 +151,15 @@ var App=angular.module('starter',  ['ionic',"starter.controllers"])
       cache:false,
   
       templateUrl: "pages/parentpages/parentHome.html",
+  })
     
+<<<<<<< HEAD
 <<<<<<< HEAD
     })
 =======
+=======
+
+>>>>>>> a1cd3c27e494a27b942e14940e7229cb5e30c86c
       .state('teacherhome.home', {
                 url: '/home',
                 views:{
@@ -168,7 +173,13 @@ var App=angular.module('starter',  ['ionic',"starter.controllers"])
                 
             })
     
+<<<<<<< HEAD
 >>>>>>> ca43149d765b5e636f22bc95549565cb5e216944
+=======
+
+    })
+
+>>>>>>> a1cd3c27e494a27b942e14940e7229cb5e30c86c
       .state('teacherhome.profile', {
                 url: '/profile',
                 views:{
