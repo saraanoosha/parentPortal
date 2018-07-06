@@ -17,7 +17,26 @@
                         <span class="input-label">Last Name</span>
                         <input type="text" name="studentLastname" placeholder="enter Last Name" ng-model="data.studentLastname">
                     </label>
-                    
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Email</span>
+                        <input type="text" name="studentEmail" placeholder="enter Email" ng-model="data.studentEmail">
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">User name</span>
+                        <input type="text" name="studenUsername" placeholder="enter user name" ng-model="data.studentUserName">
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Password</span>
+                        <input type="text" name="studentPassword" placeholder="enter Password" ng-model="data.studentPassword">
+                    </label>
+                      
+                       <label class="item item-input item-select">
+
+                     <div class="input-label">Program</div>
+                        <select ng-model="data.program" ng-options="x.prog_id as x.prog_name for x in allprogfound"> 
+                          <option value=""></option>
+                        </select>
+                    </label>
                       
                      <label class="item item-input item-stacked-label">
                         <span class="input-label">R0ll Number</span>
@@ -31,8 +50,8 @@
                     <label class="item item-input item-select">
                         <div class="input-label">Gender</div>
                         <select ng-model="data.genderSelect">
-                          <option option="male">Male</option>
-                          <option option="female">Female</option>
+                          <option value="male">Male</option>
+                          <option value="female">Female</option>
                         </select>
                      </label>
                       <label class="item item-input item-select">
@@ -50,32 +69,15 @@
                       </label>
 
                   
-                     <label class="item item-input item-select">
-                        <div class="input-label">Batch</div>
-                        <select ng-model="data.batch">
-                          <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="4">4</option>
-                        </select>
-                      </label>
-                      <label class="item item-input item-select">
-                      <div class="input-label">Section</div>
-                        <select ng-model="data.section">
-                          <option value="1">A</option>
-                          <option value="2">B</option>
-                          <option value="3">C</option>
-                          <option value="4">D</option>
-                        </select>
-                      </label>
+                    
 
                         <label class="item item-input item-stacked-label">
-                        <span class="input-label">student's Cnic No</span>
-                        <input type="text" name="parentCnic" placeholder="enter Student's CNIC "ng-model="data.parentCnic">
+                        <span class="input-label">Student's Cnic </span>
+                        <input type="text" name="parentCnic" placeholder="enter Student's CNIC "ng-model="data.studentCinic">
                      </label>
                      <label class="item item-input item-stacked-label">
-                        <span class="input-label">Parent's ID</span>
-                        <input type="text" name="parentID" placeholder="enter Parent's ID "ng-model="data.parentID">
+                        <span class="input-label">Parent's CNIC</span>
+                        <input type="text" name="parentID" placeholder="enter Parent's cnic "ng-model="data.parentCNIC">
                      </label>
  
  

@@ -23,7 +23,7 @@ App.controller('studentChallan', function($scope, $http,$state) {
 
    $scope.data = {};
     
-         var link = 'http://127.0.0.1:8080/myApp/parent/showChallanOfSelectedStudent.php';
+var link = 'http://127.0.0.1:8080/myApp/parent/showChallanOfSelectedStudent.php';
  $scope.studentsessiondata = sessionStorage.getItem('studentId');
  console.log($scope.studentsessiondata);
 

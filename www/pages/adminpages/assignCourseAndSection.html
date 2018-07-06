@@ -8,40 +8,52 @@
     </div>
     <form method="POST">
 
-       <table style="width:100%">
-  
-  <tr>
-    <td>     <label class="item item-input item-select">
 
-                      <div class="input-label">Course</div>
-                        <select ng-model="data.courseid" ng-options="x.course_code as x.course_name for x in allcoursesfound"> 
-                          <option value=""></option>
-                        </select>
-    </label>
-    </td>
-  </tr>
-    <tr>  
-      <td><label class="item item-input item-select">
+        <label class="item item-input item-select">
 
                       <div class="input-label">Teacher</div>
-                        <select ng-model="data.teacher" ng-options="x.teacher_cnic as x.teacher_name for x in allteachersfound"> 
+                        <select ng-model="data.teacher" ng-options="x.teacher_id as x.teacher_name for x in allteacherfound"> 
                           <option value=""></option>
                         </select>
-    </label>
-  </td>
-  </tr>
-  <tr>
-    <td>   <label class="item item-input item-select">
+          </label>
 
-                      <div class="input-label">Section</div>
-                        <select ng-model="data.section" ng-options="x.section_id as x.section_id for x in allsectionsfound"> 
+       <label class="item item-input item-select">
+
+                      <div class="input-label">course</div>
+                        <select ng-model="data.course" ng-options="x.course_id as x.course_name for x in allcoursefound"> 
                           <option value=""></option>
                         </select>
-    </label>
-  </td>
-  </tr>
-</table> 
+                    </label>
 
+                      <label class="item item-input item-select">
+
+                      <div class="input-label">Program</div>
+                        <select ng-model="data.program" ng-options="x.prog_id as x.prog_name for x in allprogfound"> 
+                          <option value=""></option>
+                        </select>
+                    </label>
+                    <label class="item item-input item-select">
+                     <div class="input-label">Batch</div>
+                        <select ng-model="data.batch" ng-options="x.batch_id as x.batch_year for x in allbatchfound"> 
+                          <option value=""></option>
+                        </select>
+                    </label>
+                     <label class="item item-input item-select">
+                     <div class="input-label">Semester</div>
+                        <select ng-model="data.yesSemester" ng-options="x.semestre_id as x.semester_name for x in allsemfound"> 
+                          <option value=""></option>
+                        </select>
+                    </label>
+
+                    <label class="item item-input item-select">
+                     <div class="input-label">Section</div>
+                        <select ng-model="data.section">
+                          <option value="1">A</option>
+                          <option value="2">B</option>
+                          <option value="3">C</option>
+                          <option value="4">D</option>
+                        </select>
+                    </label>
                  
                     
                      

@@ -24,10 +24,11 @@ App.controller('addTeacherController', function($scope, $http,$state) {
    $scope.data = {};
       //$scope.data ="hiiii";
      $scope.addTeacherSubmit = function(){
-         var link = 'http://127.0.0.1:8080/myApp/addTeacher.php';
- 
-         $http.post(link, {name : $scope.data.teacherName,address : $scope.data.teacherAddress, 
-          cnic : $scope.data.teacherCnic, email : $scope.data.TeacherEmail,
+         var link = 'http://127.0.0.1:8080/myApp/admin/addTeacher.php';
+         $scope.sessionAdminId = sessionStorage.getItem('adminId');
+          console.log($scope.sessionAdminId);
+          $http.post(link, {Desig:$scope.data.teacherDesignation ,adminID: $scope.sessionAdminId,fname : $scope.data.teacherfName,lname : $scope.data.teacherlName,address : $scope.data.teacherAddress, 
+          cnic : $scope.data.teacherCnic, email : $scope.data.TeacherEmail, username : $scope.data.Teacherusername,
           password : $scope.data.password, phone : $scope.data.phone}).then(function (res){
             
                $scope.found = res.data;
