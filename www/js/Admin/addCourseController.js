@@ -24,7 +24,7 @@ App.controller('addCourseController', function($scope, $http,$state) {
    $scope.data = {};
       //$scope.data ="hiiii";
      $scope.addCourseSubmit = function(){
-         var link = 'http://127.0.0.1:8080/myApp/addCourse.php';
+         var link = 'http://localhost:8080/myApp/admin/addCourse.php';
  
          $http.post(link, {courseName : $scope.data.courseName, courseCode : $scope.data.courseCode}).then(function (res){
             

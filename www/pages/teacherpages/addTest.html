@@ -12,44 +12,63 @@
     <span class="input-label">Total marks</span>
     <input type="text" placeholder="Total Marks" ng-model="marks">
   </label>
+  
+  <label class = "item item-input item-select">
+   <div class = "input-label">
+     Program
+   </div>
+	
+   <select ng-model="program5" ng-change="program1()">
+      <option ng-repeat="x in programs">{{x}}</option>
+     </select>
+</label>
+
  <label class = "item item-input item-select">
    <div class = "input-label">
       Batch
    </div>
 	
-   <select ng-model="selectedbatch" ng-change="getbatch()">
-      <option selected>1st</option>
-      <option>2nd</option>
-      <option>3rd</option>
-      <option>4th</option>
-   </select>
+   <select ng-model="batch3" ng-change="semester()">
+      <option  ng-repeat="y in batch1">{{y.batch}}</option>
+      </select>
 </label>
 <label class = "item item-input item-select">
    <div class = "input-label">
-      Section
+      Semester
    </div>
 	
-   <select ng-model="selectedsection" ng-change="getsection()">
-      <option selected>A</option>
-      <option>B</option>
-      <option>C</option>
-      
-   </select>
+   <select ng-model="semester1" ng-change="getcourse()">
+      <option  ng-repeat="c in semester">{{c}}</option>
+     </select>
 </label>
+
 
 <label class = "item item-input item-select">
    <div class = "input-label">
       Course
    </div>
 	
-   <select ng-model="selectedcourse" >
-      <option ng-repeat="index in course">{{course[$index]}}</option>
+   <select ng-model="selectedcourse" ng-change="section()">
+      <option ng-repeat="x in course">{{x}}</option>
      
       
    </select>
 </label>
+<label class = "item item-input item-select">
+   <div class = "input-label">
+     section
+   </div>
+	
+   <select ng-model="section">
+      <option ng-repeat="x in s">{{x}}</option>
+     
+      
+   </select>
+</label>
+
+
 </div>
-  <button type="submit" ng-click="Addtest()" class="button button-full button-assertive">
+  <button type="submit" ng-click="Addtest()" class="button button-full button-positive">
   Create
 </button>
 

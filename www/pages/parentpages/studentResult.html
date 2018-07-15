@@ -32,7 +32,7 @@
         <td>
             <label class="item item-input item-stacked-label">
                         <span class="input-label">Name</span>
-                        <input type="text" name="StudentFirstname" disabled ng-repeat="x in found | limitTo : 1" value="{{x.std_name}}">
+                        <input type="text" name="StudentFirstname" disabled ng-repeat="x in found | limitTo : 1" value="{{x.std_fname}}">
                     </label>
         </td>
     
@@ -40,7 +40,7 @@
         <label class="item item-input item-stacked-label">
                         <span class="input-label">Roll Number</span>
                         <input type="text" name="rollNumber" disabled
-                        ng-repeat="x in found | limitTo : 1" value={{x.std_roll_number}}>
+                        ng-repeat="x in found | limitTo : 1" value={{x.roll_num}}>
             </label>
         </td>
     </tr>
@@ -49,7 +49,7 @@
         <label class="item item-input item-stacked-label">
                         <span class="input-label">Section</span>
                         <input type="text" name="section" disabled
-                        ng-repeat="x in found | limitTo : 1" value={{x.std_section}}>
+                        ng-repeat="x in found | limitTo : 1" value={{x.section}}>
             </label>
         </td>
     
@@ -73,7 +73,7 @@
 
   <div class="item item-avatar">
     <h2><Strong>Course:</Strong></h2>
-     <h2 ng-repeat="x in found | limitTo : 1" >{{x.std_course_name}}</h2> 
+     <h2 ng-repeat="x in found | limitTo : 1" >{{x.std_cn}}</h2> 
     
    
   </div>
@@ -98,10 +98,10 @@
     </th>
     </tr>
     <tr ng-repeat="x in found">
-        <td>{{x.std_test_name}}</td>
-        <td>{{x.std_total_marks}}</td>
-        <td>{{x.std_obtained_marks}}</td>
-        <td>{{x.std_status}}</td>
+        <td>{{x.test_n}}</td>
+        <td>{{x.test_tm}}</td>
+        <td>{{x.test_obm}}</td>
+        <td>{{x.test_s}}</td>
     
     </tr>
 </table>

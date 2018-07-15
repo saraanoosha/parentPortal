@@ -24,7 +24,7 @@ App.controller('addParentController', function($scope, $http,$state) {
    $scope.data = {};
       //$scope.data ="hiiii";
      $scope.addParentSubmit = function(){
-         var link = 'http://127.0.0.1:8080/myApp/addParent.php';
+         var link = 'http://localhost:8080/myApp/admin/addParent.php';
  
          $http.post(link, {fname : $scope.data.parentFirstname, lname : $scope.data.parentLastname, email : $scope.data.parentEmail, password : $scope.data.parentPassword,
           username : $scope.data.parentUsername, cnic : $scope.data.parentCNIC,

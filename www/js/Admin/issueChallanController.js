@@ -23,7 +23,7 @@ App.controller('issueChallanController', function($scope, $http,$state) {
 
    $scope.data = {};
 
-var allstudentlink = 'http://127.0.0.1:8080/myApp/retrieveAllStudents.php';
+var allstudentlink = 'http://localhost:8080/myApp/admin/retrieveAllStudents.php';
 $http.post(allstudentlink, {}).then(function (res){
          $scope.allstudentsfound = res.data;
          console.log($scope.allstudentsfound);
@@ -32,7 +32,7 @@ $http.post(allstudentlink, {}).then(function (res){
 
       //$scope.data ="hiiii";
      $scope.issueChallanSubmit = function(){
-         var link = 'http://127.0.0.1:8080/myApp/issueChallan.php';
+         var link = 'http://localhost:8080/myApp/admin/issueChallan.php';
           var selectedStudent=$scope.data.student;
          console.log(selectedStudent);
          $http.post(link, {studentid :selectedStudent, regFee: $scope.data.registerationFee, 

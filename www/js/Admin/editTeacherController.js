@@ -10,7 +10,7 @@ App.controller('editTeacherController', function($scope, $http,$state) {
 
       //$scope.data ="hiiii";
      $scope.editTeacherSubmit = function(){
-          var link = 'http://127.0.0.1:8080/myApp/editTeacher.php';
+          var link = 'http://localhost:8080/myApp/admin/editTeacher.php';
 
     $http.post(link, {name : $scope.data.teacherName, course : $scope.data.course, address : $scope.data.teacherAddress, section : $scope.data.section,
           cnic : $scope.data.teacherCnic, email : $scope.data.TeacherEmail,

@@ -10,7 +10,7 @@ App.controller('editParentController', function($scope, $http,$state) {
 
       //$scope.data ="hiiii";
      $scope.editParentSubmit = function(){
-          var link = 'http://127.0.0.1:8080/myApp/editParent.php';
+          var link = 'http:http://localhost:8080/myApp/admin/editParent.php';
  
          $http.post(link, {fname : $scope.data.editparentFirstname, lname : $scope.data.editparentLastname, email : $scope.data.editparentEmail, password : $scope.data.editparentPassword,
           username : $scope.data.editparentUsername, cnic : $scope.data.editparentCNIC,

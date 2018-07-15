@@ -10,7 +10,7 @@ App.controller('editStudentController', function($scope, $http,$state) {
 
       //$scope.data ="hiiii";
      $scope.updateStudentSubmit = function(){
-          var link = 'http://127.0.0.1:8080/myApp/editStudent.php';
+          var link = 'http://localhost:8080/myApp/admin/editStudent.php';
 
     $http.post(link, {fname : $scope.data.StudentFirstname, lname : $scope.data.studentLastname, rollno : $scope.data.studentRollNo, address : $scope.data.studentAddress,
           date : $scope.data.dueDate, batch : $scope.data.batch,

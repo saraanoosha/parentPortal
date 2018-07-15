@@ -10,7 +10,7 @@ App.controller('deleteStudentController', function($scope, $http,$state) {
 
       //$scope.data ="hiiii";
      $scope.Deletesubmit = function(){
-          var link = 'http://127.0.0.1:8080/myApp/deleteStudent.php';
+          var link = 'http://localhost:8080/myApp/admin/deleteStudent.php';
  
           $http.post(link, {cnic : $scope.data.CNIC}).then(function (res){
          $scope.found = res.data;

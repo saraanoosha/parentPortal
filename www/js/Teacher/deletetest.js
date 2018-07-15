@@ -9,7 +9,7 @@ App.controller('deletetestcontroller', function($scope, $http,$state) {
   
     
     
-      var link = 'http://localhost:8080/myApp/listTest.php';
+      var link = 'http://localhost:8080/myApp/Teacher/listTest.php';
     
                $http.post(link, {user_id : userid}).then(function (res){
                    
@@ -30,7 +30,7 @@ App.controller('deletetestcontroller', function($scope, $http,$state) {
        
        
        
-           var link = 'http://localhost:8080/myApp/deletetest.php';
+           var link = 'http://localhost:8080/myApp/Teacher/deletetest.php';
     
                $http.post(link, {user_id : userid,testid:testid}).then(function (res){
                    

@@ -48,24 +48,38 @@
 
                                   <h3>{{data.dueDate | date: "MM-dd-yyyy"}}</h3>
                       </label>
-
-                  
-                     <label class="item item-input item-select">
-                        <div class="input-label">Batch</div>
-                        <select ng-model="data.batch">
-                          <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="4">4</option>
+                        <label class = "item item-input item-select">
+         <div class = "input-label">
+     Program
+        </div>
+	
+   <select ng-model="data.program">
+      <option ng-repeat="x in programs">{{x}}</option>
+     </select>
+</label>
+                       
+                        <label class = "item item-input item-select">
+         <div class = "input-label">
+     batch
+        </div>
+	
+   <select ng-model="data.batch">
+      <option ng-repeat="x in batch1">{{x.batch}}</option>
+     </select>
+</label>
+                      
+                          <label class="item item-input item-select">
+                      <div class="input-label">Semester</div>
+                        <select ng-model="data.semester">
+                          <option ng-repeat="x in sem">{{x}}</option>
+                    
                         </select>
                       </label>
                       <label class="item item-input item-select">
                       <div class="input-label">Section</div>
                         <select ng-model="data.section">
-                          <option value="1">A</option>
-                          <option value="2">B</option>
-                          <option value="3">C</option>
-                          <option value="4">D</option>
+                          <option ng-repeat="x in sec">{{x}}</option>
+                        
                         </select>
                       </label>
 

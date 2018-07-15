@@ -10,7 +10,7 @@ App.controller('deleteCourseController', function($scope, $http,$state) {
 
       //$scope.data ="hiiii";
      $scope.Deletesubmit = function(){
-          var link = 'http://127.0.0.1:8080/myApp/deleteCourse.php';
+          var link = 'http://localhost:8080/myApp/admin/deleteCourse.php';
  
           $http.post(link, {courseeCode : $scope.data.courseCode}).then(function (res){
          $scope.found = res.data;
