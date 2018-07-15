@@ -1,3 +1,19 @@
+<style type="text/css">
+    
+#result {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+#result td, #result th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+#result tr:nth-child(even){background-color: #f2f2f2;}
+
+#result tr:hover {background-color: #ddd;}
+</style>
+
 <ion-view view-title="Parent Monitoring System">
   <ion-content class="padding" ng-controller="studentChallan">
     <div class="list card">
@@ -9,16 +25,18 @@
     </div>
     
     <form method="POST">
-    
+
                   <label class="item item-input item-stacked-label">
                         <span class="input-label">First Name</span>
                         <input type="text" name="StudentFirstname" disabled ng-repeat="x in found" value={{x.std_fname}}>
+
                     </label>
-                      <label class="item item-input item-stacked-label">
-                        <span class="input-label">Last Name</span>
-                        <input type="text" disabled ng-repeat="x in found" value={{x.std_lastname}}>
+                 
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Program</span>
+                        <input type="text" disabled ng-repeat="x in found" value={{x.std_prog}}>
                     </label>
-                    
+  
                     
                     <label class="item item-input item-stacked-label">
                         <span class="input-label">R0ll Number</span>
@@ -26,6 +44,7 @@
                      </label>
                        
                     <label class="item item-input item-stacked-label">
+
                         <span class="input-label">Registeration Fee</span>
                         <input type="text" disabled ng-repeat="x in found" value={{x.challan_regfee}}>
                      </label>
@@ -33,6 +52,7 @@
                         <span class="input-label">Tuition Fee</span>
                         <input type="text" disabled ng-repeat="x in found" value={{x.challan_tuifee}}>
                      </label>
+
                        <label class="item item-input item-stacked-label">
                         <span class="input-label">Fine</span>
                         <input type="text" disabled ng-repeat="x in found" value={{x.challan_fine}}>
@@ -42,7 +62,11 @@
                         <span class="input-label">Fine </span>
                         <input type="text" disabled ng-repeat="x in found" value={{x.challan_fineDes}}>
                      </label>
-                      <label class="item item-input item-stacked-label">
+                  
+                       
+                      
+                     <label class="item item-input item-stacked-label">
+
                         <span class="input-label">Issue Date</span>
                         <input type="text" disabled ng-repeat="x in found" value={{x.challan_issuedate}}>
                      </label>
@@ -58,6 +82,7 @@
                         <span class="input-label">Total Amount</span>
                         <input type="text" disabled ng-repeat="x in found" value={{x.challan_total}}>
                      </label>
+
                      <label class="item item-input item-stacked-label">
                         <span class="input-label">Status</span>
                         <input type="text" disabled ng-repeat="x in found" value={{x.challan_status}}>
@@ -66,6 +91,7 @@
                       
                        </form>
    
+
                
                 <ion-infinite-scroll
                     on-infinite="loadMore()"

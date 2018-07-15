@@ -7,12 +7,13 @@
       </div>
     </div>
     <form>
-                    <label class="item item-input item-stacked-label">
-                        <span class="input-label">Enter Course Code you want to delete!</span>
-                        <input type="text" name="courseCode"  placeholder="enter Course Code" ng-model="data.courseCode">
+                  <label class="item item-input item-select">
+
+                      <div class="input-label">course</div>
+                        <select ng-model="data.course" ng-options="x.course_id as x.course_name for x in allcoursefound"> 
+                          <option value=""></option>
+                        </select>
                     </label>
-                      
- 
                     <input ng-click="Deletesubmit()" class="button button-block button-positive" type="submit"  value="delete" name="Deletesubmit">                    
                 </form>
                 <div class="card">

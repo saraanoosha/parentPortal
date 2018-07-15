@@ -9,15 +9,6 @@
       </div>
     </div>
     <form method="POST">
-                     <label class="item item-input item-select">
-
-                      <div class="input-label">Student</div>
-                        <select ng-model="data.student" ng-options="x.student_id as x.student_name for x in allstudentsfound"> 
-                          <option value=""></option>
-                        </select>
-    </label>
-                    
-                    
                       
                      <label class="item item-input item-stacked-label">
                         <span class="input-label">Registeration Fee</span>
@@ -28,18 +19,10 @@
                         <input type="text" name="tuitionFee" placeholder="enter Tuition Fee" ng-model="data.tuitionFee">
                      </label>
 
-                      </label>
-                      <label class="item item-input item-stacked-label">
-                        <span class="input-label">Total Fine</span>
-                        <input type="text" name="fine" placeholder="enter Fine" ng-model="data.fine">
-                     </label>
-                      <label class="item item-input item-stacked-label">
-                        <span class="input-label">Fine For</span>
-                        <input type="text" name="finefor" placeholder="Fine Description" ng-model="data.finefor">
-                     </label>
+                      
                    
                       <label class="item item-input item-select">
-                        <span class="input-label">Issue Date</span>
+                        <span class="input-label">Date</span>
                         <ion-list>
                           <ion-item class="item-input">
                             <label class="item-input">
@@ -53,7 +36,7 @@
                      
 
                        <label class="item item-input item-select">
-                        <span class="input-label">Submission Date</span>
+                        <span class="input-label">Till</span>
                         <ion-list>
                           <ion-item class="item-input">
                             <label class="item-input">
@@ -78,10 +61,7 @@
                      </label>
 
 
-                     <label class="item item-input item-stacked-label">
-                        <span class="input-label">Status </span>
-                        <input type="text" name="status" placeholder="enter Admin's Full Name "ng-model="data.status">
-                     </label>
+                     
  
  
  

@@ -23,21 +23,26 @@ App.controller('issueChallanController', function($scope, $http,$state) {
 
    $scope.data = {};
 
-var allstudentlink = 'http://localhost:8080/myApp/admin/retrieveAllStudents.php';
-$http.post(allstudentlink, {}).then(function (res){
-         $scope.allstudentsfound = res.data;
-         console.log($scope.allstudentsfound);
 
-           });
 
       //$scope.data ="hiiii";
      $scope.issueChallanSubmit = function(){
-         var link = 'http://localhost:8080/myApp/admin/issueChallan.php';
-          var selectedStudent=$scope.data.student;
-         console.log(selectedStudent);
-         $http.post(link, {studentid :selectedStudent, regFee: $scope.data.registerationFee, 
-          tuiFee : $scope.data.tuitionFee, finee: $scope.data.fine, finef:$scope.data.finefor, challanIssueDate: $scope.data.issueDate,
-          challanSubmissionDate : $scope.data.submissionDate, chllanIssuedBy : $scope.data.issuedBy, challanStatus: $scope.data.status}).then(function (res){
+
+         var link = 'http://127.0.0.1:8080/myApp/admin/issueChallan.php';
+         $scope.sessionprogramid = sessionStorage.getItem('proggid');
+         console.log($scope.sessionprogramid);
+         $scope.sessionbatchid = sessionStorage.getItem('batchid');
+         console.log($scope.sessionbatchid);
+         $scope.sessionsemid = sessionStorage.getItem('semid');
+         console.log($scope.sessionsemid);
+
+
+
+
+         $http.post(link, {prog:$scope.sessionprogramid,batch:$scope.sessionbatchid,sem:$scope.sessionsemid,regFee: $scope.data.registerationFee, 
+          tuiFee : $scope.data.tuitionFee,challanIssueDate: $scope.data.issueDate,
+          challanSubmissionDate : $scope.data.submissionDate, chllanIssuedBy : $scope.data.issuedBy}).then(function (res){
+
             
                $scope.found = res.data;
            if($scope.found == "yup")

@@ -2,7 +2,7 @@ angular.module('starter.controllers',['ionic'])
 .config(function($ionicConfigProvider) {
         if(!ionic.Platform.isIOS())$ionicConfigProvider.scrolling.jsScrolling(false);
 })
-App.controller('addCourseController', function($scope, $http,$state) {
+App.controller('assignSectionsToCourseController', function($scope, $http,$state) {
 
   $scope.loadMore = function() {
     $http.get('/more-items').success(function(items) {
@@ -11,7 +11,7 @@ App.controller('addCourseController', function($scope, $http,$state) {
     });
   };
 
-   $scope.addCourseBackButton= function(){
+   $scope.assignSectionsToCourseBackButton= function(){
         
          
            $state.go('adminhome.course');
@@ -23,6 +23,13 @@ App.controller('addCourseController', function($scope, $http,$state) {
 
    $scope.data = {};
       //$scope.data ="hiiii";
+       var ShowAllCourseLink = 'http://127.0.0.1:8080/myApp/admin/retrieveAllCourses.php';
+      $http.post(ShowAllCourseLink, {}).then(function (res){
+         $scope.allcoursefound = res.data;
+         console.log($scope.allcoursefound);
+
+           });
+
       var ShowProglink = 'http://127.0.0.1:8080/myApp/admin/retrieveProgram.php';
       $http.post(ShowProglink, {}).then(function (res){
          $scope.allprogfound = res.data;
@@ -42,9 +49,7 @@ App.controller('addCourseController', function($scope, $http,$state) {
 
            });
 
-
-        
-
+     $scope.addCourseSubmit = function(){
 
       
 
@@ -54,10 +59,14 @@ App.controller('addCourseController', function($scope, $http,$state) {
         console.log(selectedProg);
         var selectedSemester=$scope.data.yesSemester;
         console.log(selectedSemester);
+        var selectedCourse=$scope.data.course;
+        console.log(selectedCourse);
+        var selectedSection=$scope.data.section;
+        console.log(selectedSection);
 
-         var link = 'http://127.0.0.1:8080/myApp/admin/addCourse.php';
+         var link = 'http://127.0.0.1:8080/myApp/admin/assignSectionsToCourse.php';
  
-         $http.post(link, {courseName : $scope.data.courseName, prog : selectedProg, batch: selectedBatch, sem: selectedSemester}).then(function (res){
+         $http.post(link, {section : selectedSection, course : selectedCourse, prog : selectedProg, batch: selectedBatch, sem: selectedSemester}).then(function (res){
             
                $scope.found = res.data;
            if($scope.found == "yup")

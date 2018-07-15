@@ -1,16 +1,21 @@
 <ion-view view-title="Parent Monitoring System">
-  <ion-content class="padding" ng-controller="addCourseController">
+  <ion-content class="padding" ng-controller="assignSectionsToCourseController">
     <div class="list card">
       <div class="item item-divider"></div>
       <div class="item item-body">
-        <button class="button button-positive" ng-click="addCourseBackButton()">Back</button>
+        <button class="button button-positive" ng-click="assignSectionsToCourseBackButton()">Back</button>
       </div>
     </div>
     <form method="POST">
-                    <label class="item item-input item-stacked-label">
-                        <span class="input-label">Course Name</span>
-                        <input type="text" name="CourseName"  placeholder="enter Course" ng-model="data.courseName">
+                        
+                      <label class="item item-input item-select">
+
+                      <div class="input-label">course</div>
+                        <select ng-model="data.course" ng-options="x.course_id as x.course_name for x in allcoursefound"> 
+                          <option value=""></option>
+                        </select>
                     </label>
+
                       <label class="item item-input item-select">
 
                       <div class="input-label">Program</div>
@@ -28,6 +33,16 @@
                      <div class="input-label">Semester</div>
                         <select ng-model="data.yesSemester" ng-options="x.semestre_id as x.semester_name for x in allsemfound"> 
                           <option value=""></option>
+                        </select>
+                    </label>
+
+                    <label class="item item-input item-select">
+                     <div class="input-label">Section</div>
+                        <select ng-model="data.section">
+                          <option value="1">A</option>
+                          <option value="2">B</option>
+                          <option value="3">C</option>
+                          <option value="4">D</option>
                         </select>
                     </label>
                      

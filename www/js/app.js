@@ -409,6 +409,13 @@ course:null
   cache:false,
   templateUrl:'pages/adminpages/deleteCourse.html'
 })
+
+.state('assignsectionstocourse',{
+  url:"/assignsectionstocourse",
+  cache:false,
+  templateUrl:'pages/adminpages/assignSectionsToCourse.html'
+})
+
 .state('deleteparent',{
   url:"/deleteparent",
   cache:false,

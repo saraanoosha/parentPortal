@@ -2,24 +2,41 @@ angular.module('starter.controllers',[])
 
 App.controller('assignCourseAndSectionController', function($scope, $http,$state) {
 $scope.data = {};
-var allcourseslink = 'http://localhost:8080/myApp/admin/retrieveAllCourses.php';
-$http.post(allcourseslink, {}).then(function (res){
-         $scope.allcoursesfound = res.data;
-         console.log($scope.allcoursesfound);
+
+var ShowAllTeachersLink = 'http://127.0.0.1:8080/myApp/admin/retrieveAllTeachers.php';
+      $http.post(ShowAllTeachersLink, {}).then(function (res){
+         $scope.allteacherfound = res.data;
+         console.log($scope.allteacherfound);
 
            });
-var allteacherslink = 'http://localhost:8080/myApp/admin/retrieveAllTeachers.php';
-$http.post(allteacherslink, {}).then(function (res){
-         $scope.allteachersfound = res.data;
-         console.log($scope.allteachersfound);
+
+var ShowAllCourseLink = 'http://127.0.0.1:8080/myApp/admin/retrieveAllCourses.php';
+      $http.post(ShowAllCourseLink, {}).then(function (res){
+         $scope.allcoursefound = res.data;
+         console.log($scope.allcoursefound);
 
            });
-var allsectionslink = 'http://localhost:8080/myApp/admin/retrieveAllSections.php';
-$http.post(allsectionslink, {}).then(function (res){
-         $scope.allsectionsfound = res.data;
-         console.log($scope.allsectionsfound);
+var ShowProglink = 'http://127.0.0.1:8080/myApp/admin/retrieveProgram.php';
+      $http.post(ShowProglink, {}).then(function (res){
+         $scope.allprogfound = res.data;
+         console.log($scope.allprogfound);
 
            });
+var Showbatchlink = 'http://127.0.0.1:8080/myApp/admin/retrieveBatch.php';
+      $http.post(Showbatchlink, {}).then(function (res){
+         $scope.allbatchfound = res.data;
+         console.log($scope.allbatchfound);
+
+           });
+
+ var Showsemesterlink = 'http://127.0.0.1:8080/myApp/admin/retrieveSem.php';
+      $http.post(Showsemesterlink, {}).then(function (res){
+         $scope.allsemfound = res.data;
+         console.log($scope.allsemfound);
+
+
+           });
+
       
    
     $scope.assignCourseAndSectionBackButton = function(){
@@ -29,28 +46,34 @@ $http.post(allsectionslink, {}).then(function (res){
 
       //$scope.data ="hiiii";
      $scope.assignSubmit = function(){
-      var selectedCourse=$scope.data.courseid;
-         console.log(selectedCourse);
-          var selectedteacher=$scope.data.teacher;
-         console.log(selectedteacher);
-          var selectedsection=$scope.data.section;
-         console.log(selectedsection);
+       var selectedBatch=$scope.data.batch;
+        console.log(selectedBatch);
+        var selectedProg=$scope.data.program;
+        console.log(selectedProg);
+        var selectedSemester=$scope.data.yesSemester;
+        console.log(selectedSemester);
+        var selectedCourse=$scope.data.course;
+        console.log(selectedCourse);
+        var selectedSection=$scope.data.section;
+        console.log(selectedSection);
+        var selectedTeacher=$scope.data.teacher;
+        console.log(selectedTeacher);
 
 
-          var link = 'http://localhost:8080/myApp/admin/assignCourse.php';
+          var link = 'http://127.0.0.1:8080/myApp/admin/assignCourse.php';
+
  
-        $http.post(link, {course : selectedCourse, teacher : selectedteacher, section : selectedsection}).then(function (res){
+        $http.post(link, {course : selectedCourse, teacher : selectedTeacher, section : selectedSection, semester:selectedSemester,
+         prog: selectedProg, batch:selectedBatch  }).then(function (res){
          $scope.found = res.data;
-          if($scope.found == "inserted in tables")
+            if($scope.found == "yup")
               {
-            alert("try again");
+            alert("not assignedd");
               }
-            else
+              if($scope.found != "yup")
               {
-              
-              alert("Section and Courses assigned Successfully");
-              
-               }
+            alert("assigned");
+              }
 
            });
          //$state.go('adminhome.parent');
