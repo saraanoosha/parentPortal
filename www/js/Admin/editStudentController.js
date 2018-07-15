@@ -10,9 +10,11 @@ App.controller('editStudentController', function($scope, $http,$state) {
 
       //$scope.data ="hiiii";
      $scope.updateStudentSubmit = function(){
+
           $scope.sessionAdminId = sessionStorage.getItem('adminId');
           console.log($scope.sessionAdminId);
           var link = 'http://127.0.0.1:8080/myApp/admin/editStudent.php';
+
 
           $http.post(link, {adminid : $scope.sessionAdminId, fname : $scope.data.StudentFirstname, lname : $scope.data.studentLastname, std_email : $scope.data.studentEmail, std_username : $scope.data.studentUserName,
           std_password : $scope.data.studentPassword, program : $scope.data.ProgramSelect,

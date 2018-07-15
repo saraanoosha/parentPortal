@@ -1,15 +1,15 @@
 angular.module('starter.controllers',[])
 
-App.controller('Teacherlogin', function($scope, $http,$state) {
+App.controller('studentlogin', function($scope, $http,$state) {
 
  $scope.data = {};
-       $scope.Teacherlogin = function(){
+       $scope.login = function(){
         // var link = 'http://40.65.178.216/ionic/myApp/Teacherlogin.php';
         // http://localhost:8080/myApp/Teacherlogin.php
        
-            var link = 'http://localhost:8080/myApp/Teacher/Teacherlogin.php';
+            var link = 'http://localhost:8080/myApp/student/login.php';
 
-        $http.post(link, {username : $scope.tusername, password : $scope.tpassword}).then(function (res){
+        $http.post(link, {username : $scope.username, password : $scope.password}).then(function (res){
             
    
      $scope.found=res.data.status;
@@ -25,7 +25,7 @@ App.controller('Teacherlogin', function($scope, $http,$state) {
              if($scope.found === "true")
                  
               {
-               $state.go('teacherhome');
+               $state.go('studenthome');
               
            
              

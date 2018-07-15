@@ -2,6 +2,7 @@ angular.module('starter.controllers',[])
 
 App.controller('assignCourseAndSectionController', function($scope, $http,$state) {
 $scope.data = {};
+
 var ShowAllTeachersLink = 'http://127.0.0.1:8080/myApp/admin/retrieveAllTeachers.php';
       $http.post(ShowAllTeachersLink, {}).then(function (res){
          $scope.allteacherfound = res.data;
@@ -33,6 +34,7 @@ var Showbatchlink = 'http://127.0.0.1:8080/myApp/admin/retrieveBatch.php';
          $scope.allsemfound = res.data;
          console.log($scope.allsemfound);
 
+
            });
 
       
@@ -59,6 +61,7 @@ var Showbatchlink = 'http://127.0.0.1:8080/myApp/admin/retrieveBatch.php';
 
 
           var link = 'http://127.0.0.1:8080/myApp/admin/assignCourse.php';
+
  
         $http.post(link, {course : selectedCourse, teacher : selectedTeacher, section : selectedSection, semester:selectedSemester,
          prog: selectedProg, batch:selectedBatch  }).then(function (res){

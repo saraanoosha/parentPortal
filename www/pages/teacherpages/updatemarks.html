@@ -1,5 +1,5 @@
 <ion-view view-title="Marks management">
-  <ion-content class="padding" ng-controller="marksAddcontroller">
+  <ion-content class="padding" ng-controller="marksupdatecontroller">
 <style>
 table {
     border-collapse: collapse;
@@ -27,6 +27,7 @@ tr:nth-child(even){background-color: #f2f2f2}
       </tr>
       
       
+       
              <tr ng-repeat="x in students">
       <td>{{x.fname}}</td>
       <td>{{x.lname}}</td>
@@ -50,13 +51,16 @@ tr:nth-child(even){background-color: #f2f2f2}
   
          </td>
      
-     <td><button type="submit" onclick="this.disabled=true" ng-click="addmarks(x,status,obmarks)"  class="button button-small button-positive">
+     <td><button type="submit" onclick="this.disabled=true" ng-click="updatemarks(x,status,obmarks)"  class="button button-small button-positive">
     
-  Add
+ Update
          </button></td>
          
          
  </tr>
+      
+      
+   
    
 
    

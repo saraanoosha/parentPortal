@@ -1,5 +1,5 @@
 <ion-view view-title="Parent Monitoring System">
-  <ion-content class="padding" ng-controller="studentAttendence">
+  <ion-content class="padding" ng-controller="getstudentlocation">
     <div class="list card">
       <div class="item item-divider"></div>
       <div class="item item-body">
@@ -13,13 +13,17 @@
   {{x.fname}} 
    {{x.lname}}
     <button type="button" ng-click="view(x)"class="button button-positive">
-      <i class="icon ion-eye"> select course</i>
+      <i class="icon ion-eye"> view Location</i>
     </button>
   </div>
 
 
 
 </div>
+ 
+  <button type="button" ui-sref="parenthome.test" class="button button-positive">
+    test
+    </button>
 
  
   </ion-content>

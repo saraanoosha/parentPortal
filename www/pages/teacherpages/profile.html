@@ -7,8 +7,8 @@
 
    <a class="item item-thumbnail-left" href="#">
      <img src="/www/img/profile.jpg"/>
-       <h2><b>{{profile.name}}</b></h2>
-          <p>Assistant Professor</p>
+       <h2><b>{{profile.fname}} {{profile.lname}}</b></h2>
+          <p>{{profile.designation}}</p>
     </a>
     
     
@@ -19,7 +19,11 @@
   </div>
 
   <a class="item" href="#">
- <b>Name:</b>  {{profile.name}}
+ <b>Last Name:</b>  {{profile.fname}}
+  </a>
+  
+   <a class="item" href="#">
+ <b>First Name:</b>  {{profile.lname}}
   </a>
   
     <a class="item" href="#">

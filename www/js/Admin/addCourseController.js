@@ -42,7 +42,9 @@ App.controller('addCourseController', function($scope, $http,$state) {
 
            });
 
-     $scope.addCourseSubmit = function(){
+
+        
+
 
       
 

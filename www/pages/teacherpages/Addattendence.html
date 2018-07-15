@@ -18,9 +18,11 @@ tr:nth-child(even){background-color: #f2f2f2}
 <div style="overflow-x:auto;">
 
 <form >
- <input type="date" 
-       ng-model="date" 
-       value="{{ date | date: 'yyyy-MM-dd' }}" />
+    Date:
+  <input type="varchar" placeholder="dd-mm-yyyy" ng-model="date1"/>
+
+  
+  
   <table >
     <tr>
       <th>Firstname</th>
@@ -37,19 +39,17 @@ tr:nth-child(even){background-color: #f2f2f2}
       <td> 
       
       <div class="row">
-  <div class="col"><button type="submit" onclick="this.disabled=true" ng-click="addattendence(x,'P',date1)" ui-sref="teacherhome.Addattendence" class="button button-small button-assertive">
+  <div class="col"><button type="submit" onclick="this.disabled=true" ng-click="addattendence(x,'P',date1)" ui-sref="teacherhome.Addattendence" class="button button-small button-positive">
     
   Present
          </button></div>
-  <div class="col"><button type="submit" onclick="this.disabled=true" ng-click="addattendence(x,'A',date1)" ui-sref="teacherhome.Addattendence" class="button button-small button-assertive">
+  <div class="col"><button type="submit" onclick="this.disabled=true" ng-click="addattendence(x,'A',date1)" ui-sref="teacherhome.Addattendence" class="button button-small button-positive">
     
   Absent
          </button></div>
   
 </div>
-<!--      <input type="radio" ng-model="x.myVar" value="P">Present-->
 
-<!--<input type="radio" ng-model="x.myVar" value="A">Absent-->
   
    </td>
      <td></td>

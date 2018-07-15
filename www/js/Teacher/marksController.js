@@ -9,14 +9,14 @@ App.controller('markscontroller', function($scope, $http,$state) {
   
     
     
-      var link = 'http://localhost:8080/myApp/listTest.php';
+      var link = 'http://localhost:8080/myApp/Teacher/listTest.php';
     
                $http.post(link, {user_id : userid}).then(function (res){
                    
                  
     
                    $scope.test=res.data;
-                   //console.log($scope.test);
+                   console.log($scope.test);
                    
             
  
@@ -30,14 +30,31 @@ App.controller('markscontroller', function($scope, $http,$state) {
          sessionStorage.setItem('Msection',x.sectionname);
           sessionStorage.setItem('Mbatch',x.batchyear);
          sessionStorage.setItem('Mtestid',x.testid);
+        sessionStorage.setItem('Mprogram',x.program);
+            sessionStorage.setItem('Msemester',x.semester);
+         sessionStorage.setItem('Mtotmarks',x.totmarks);
         
-        $state.go('teacherhome.MarksAdd');
+        $state.go('teacherhome.updatemarks');
         
         
         
         
         
     }
+    
+        $scope.viewmarks = function(x){
+        
+      
+         sessionStorage.setItem('vtestid',x.testid);
+        
+        $state.go('teacherhome.viewtestmarks');
+        
+        
+        
+        
+        
+    }
+    
     
     
   

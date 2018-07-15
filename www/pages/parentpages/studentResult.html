@@ -40,7 +40,9 @@
         <label class="item item-input item-stacked-label">
                         <span class="input-label">Program</span>
                         <input type="text" name="rollNumber" disabled
-                        ng-repeat="x in found | limitTo : 1" value={{x.std_prog}}>
+
+                        ng-repeat="x in found | limitTo : 1" value={{x.roll_num}}>
+
             </label>
         </td>
     </tr>
@@ -49,7 +51,9 @@
         <label class="item item-input item-stacked-label">
                         <span class="input-label">Batch</span>
                         <input type="text" name="section" disabled
-                        ng-repeat="x in found | limitTo : 1" value={{x.std_batch}}>
+
+                        ng-repeat="x in found | limitTo : 1" value={{x.section}}>
+
             </label>
         </td>
     

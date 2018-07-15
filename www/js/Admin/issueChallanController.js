@@ -27,6 +27,7 @@ App.controller('issueChallanController', function($scope, $http,$state) {
 
       //$scope.data ="hiiii";
      $scope.issueChallanSubmit = function(){
+
          var link = 'http://127.0.0.1:8080/myApp/admin/issueChallan.php';
          $scope.sessionprogramid = sessionStorage.getItem('proggid');
          console.log($scope.sessionprogramid);
@@ -41,6 +42,7 @@ App.controller('issueChallanController', function($scope, $http,$state) {
          $http.post(link, {prog:$scope.sessionprogramid,batch:$scope.sessionbatchid,sem:$scope.sessionsemid,regFee: $scope.data.registerationFee, 
           tuiFee : $scope.data.tuitionFee,challanIssueDate: $scope.data.issueDate,
           challanSubmissionDate : $scope.data.submissionDate, chllanIssuedBy : $scope.data.issuedBy}).then(function (res){
+
             
                $scope.found = res.data;
            if($scope.found == "yup")

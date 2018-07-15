@@ -24,10 +24,14 @@ App.controller('addParentController', function($scope, $http,$state) {
    $scope.data = {};
       //$scope.data ="hiiii";
      $scope.addParentSubmit = function(){
+
+      
+
         $scope.sessionAdminId = sessionStorage.getItem('adminId');
           console.log($scope.sessionAdminId);
 
          var link = 'http://127.0.0.1:8080/myApp/admin/addParent.php';
+
  
          $http.post(link, {adminID: $scope.sessionAdminId,fname : $scope.data.parentFirstname, lname : $scope.data.parentLastname, email : $scope.data.parentEmail, password : $scope.data.parentPassword,
           username : $scope.data.parentUsername, cnic : $scope.data.parentCNIC,

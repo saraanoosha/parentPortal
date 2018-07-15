@@ -21,6 +21,7 @@ App.controller('deleteCourseController', function($scope, $http,$state) {
          var selectedCourse=$scope.data.course;
         console.log(selectedCourse);
           var link = 'http://127.0.0.1:8080/myApp/admin/deleteCourse.php';
+
  
           $http.post(link, {course : selectedCourse}).then(function (res){
          $scope.found = res.data;

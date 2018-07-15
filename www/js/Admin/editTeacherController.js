@@ -10,7 +10,9 @@ App.controller('editTeacherController', function($scope, $http,$state) {
 
       //$scope.data ="hiiii";
      $scope.editTeacherSubmit = function(){
+
           var link = 'http://127.0.0.1:8080/myApp/admin/editTeacher.php';
+
 
     $scope.sessionAdminId = sessionStorage.getItem('adminId');
           console.log($scope.sessionAdminId);

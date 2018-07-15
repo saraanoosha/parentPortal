@@ -10,9 +10,11 @@ App.controller('editParentController', function($scope, $http,$state) {
 
       //$scope.data ="hiiii";
      $scope.editParentSubmit = function(){
+
           var link = 'http://127.0.0.1:8080/myApp/admin/editParent.php';
           $scope.sessionAdminId = sessionStorage.getItem('adminId');
           console.log($scope.sessionAdminId);
+
  
          $http.post(link, {adminID : $scope.sessionAdminId, fname : $scope.data.editparentFirstname, lname : $scope.data.editparentLastname, email : $scope.data.editparentEmail, password : $scope.data.editparentPassword,
           username : $scope.data.editparentUsername, cnic : $scope.data.editparentCNIC,

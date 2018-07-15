@@ -20,72 +20,78 @@
       <div class="item item-divider"></div>
       <div class="item item-body">
         <button class="button button-positive" ng-click="studentChallanBack()">
-      <i class="icon ion-android-arrow-back">  
-    </i></button>
+      <i class="icon ion-android-arrow-back">  </i></button>
       </div>
     </div>
+    
     <form method="POST">
-    <table>
-<tr>
-<td>
-                    <label class="item item-input item-stacked-label">
-                        <span class="input-label">Name</span>
-                        <input type="text" name="StudentFirstname" disabled ng-repeat="x in found" value={{x.std_fname}}{{x.std_lastname}}>
-                       <!--  <input type="text" disabled ng-repeat="x in found" value={{x.std_lastname}}> -->
+
+                  <label class="item item-input item-stacked-label">
+                        <span class="input-label">First Name</span>
+                        <input type="text" name="StudentFirstname" disabled ng-repeat="x in found" value={{x.std_fname}}>
+
                     </label>
-    </td>
-    <td>                 
+                 
                     <label class="item item-input item-stacked-label">
                         <span class="input-label">Program</span>
                         <input type="text" disabled ng-repeat="x in found" value={{x.std_prog}}>
                     </label>
-                </td>
-</tr>
-<tr>
-    <td>
+  
+                    
                     <label class="item item-input item-stacked-label">
-                        <span class="input-label">Batch</span>
-                        <input type="text" disabled ng-repeat="x in found" value={{x.std_batch}}>
-                    </label>
-                </td>
-                <td>
+                        <span class="input-label">R0ll Number</span>
+                        <input type="text" disabled ng-repeat="x in found" value={{x.std_rollnumber}}>
+                     </label>
+                       
                     <label class="item item-input item-stacked-label">
-                        <span class="input-label">Semester</span>
-                        <input type="text" disabled ng-repeat="x in found" value={{x.std_semes}}>
-                    </label>
-                </td>
-</tr>               
-    </table id="result">           
-                     
-                     <label class="item item-input item-stacked-label">
+
                         <span class="input-label">Registeration Fee</span>
-                        <input type="text" " disabled ng-repeat="x in found" value={{x.challan_regfee}}>
+                        <input type="text" disabled ng-repeat="x in found" value={{x.challan_regfee}}>
                      </label>
-                     <label class="item item-input item-stacked-label">
+                      <label class="item item-input item-stacked-label">
                         <span class="input-label">Tuition Fee</span>
-                        <input type="text" " disabled ng-repeat="x in found" value={{x.challan_tuifee}}>
+                        <input type="text" disabled ng-repeat="x in found" value={{x.challan_tuifee}}>
                      </label>
+
+                       <label class="item item-input item-stacked-label">
+                        <span class="input-label">Fine</span>
+                        <input type="text" disabled ng-repeat="x in found" value={{x.challan_fine}}>
+                     </label>
+                     
+                      <label class="item item-input item-stacked-label">
+                        <span class="input-label">Fine </span>
+                        <input type="text" disabled ng-repeat="x in found" value={{x.challan_fineDes}}>
+                     </label>
+                  
                        
                       
                      <label class="item item-input item-stacked-label">
+
                         <span class="input-label">Issue Date</span>
-                        <input type="text" " disabled ng-repeat="x in found" value={{x.challan_issuedate}}>
+                        <input type="text" disabled ng-repeat="x in found" value={{x.challan_issuedate}}>
                      </label>
-                     <label class="item item-input item-stacked-label">
+                      <label class="item item-input item-stacked-label">
                         <span class="input-label">Submission Date</span>
-                        <input type="text" " disabled ng-repeat="x in found" value={{x.challan_lastdate}}>
+                        <input type="text" disabled ng-repeat="x in found" value={{x.challan_lastdate}}>
                      </label>
-                     <label class="item item-input item-stacked-label">
+                      <label class="item item-input item-stacked-label">
                         <span class="input-label">Issued By</span>
-                        <input type="text" " disabled ng-repeat="x in found" value={{x.challan_issuedby}}>
+                        <input type="text" disabled ng-repeat="x in found" value={{x.challan_issuedby}}>
                      </label>
-                     <label class="item item-input item-stacked-label">
+                      <label class="item item-input item-stacked-label">
                         <span class="input-label">Total Amount</span>
-                        <input type="text" " disabled ng-repeat="x in found" value={{x.challan_total}}>
+                        <input type="text" disabled ng-repeat="x in found" value={{x.challan_total}}>
+                     </label>
+
+                     <label class="item item-input item-stacked-label">
+                        <span class="input-label">Status</span>
+                        <input type="text" disabled ng-repeat="x in found" value={{x.challan_status}}>
                      </label>
                       
-                                      
-                </form>
+                      
+                       </form>
+   
+
                
                 <ion-infinite-scroll
                     on-infinite="loadMore()"

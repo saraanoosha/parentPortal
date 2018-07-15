@@ -16,7 +16,7 @@ $scope.sessiondata = sessionStorage.getItem('parentId');
 
 console.log($scope.sessiondata);
 $scope.data = {};
-         var link = 'http://127.0.0.1:8080/myApp/parent/retrieveStudents.php';
+         var link = 'http://localhost:8080/myApp/parent/retrieveStudents.php';
         // var courseLink = 'http://127.0.0.1:8080/myApp/parent/retrieveCourses.php';
          $http.post(link, {id : $scope.sessiondata}).then(function (res){
           $scope.found = res.data;
@@ -61,7 +61,7 @@ $scope.selectCourseBack=function(){
 
 $scope.studentsessiondata = sessionStorage.getItem('studentId');
 console.log($scope.studentsessiondata);
-var courseLink = 'http://127.0.0.1:8080/myApp/parent/retrieveCourses.php';
+var courseLink = 'http://localhost:8080/myApp/parent/retrieveCourses.php';
  $http.post(courseLink, {cid : $scope.studentsessiondata}).then(function (cres){
           $scope.courseFound = cres.data;
           console.log($scope.courseFound);
@@ -74,3 +74,4 @@ var courseLink = 'http://127.0.0.1:8080/myApp/parent/retrieveCourses.php';
   sessionStorage.setItem('yocourseId',selectedCourseId);
  }
 });
+

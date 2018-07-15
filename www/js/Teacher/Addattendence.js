@@ -1,20 +1,20 @@
 angular.module('starter.controllers',[])
 
-App.controller('Addattendence', function($scope, $http, $state,attendence) {
+App.controller('Addattendence', function($scope, $http, $state,attendence,$stateParams) {
+    var batch=$stateParams.batch;
+    var program=$stateParams.program;
+    var semester = $stateParams.semester;
+    var course=$stateParams.course;
+    var section = $stateParams.section;
+  
 
-    var section1 = sessionStorage.getItem('Attsection');
-     var batch1 = sessionStorage.getItem('Attbatch');
-    
-   
-     var batch= batch1;
-    var section =section1;
        var userid = sessionStorage.getItem('user');
    
              
     
-      var link = 'http://localhost:8080/myApp/Liststudents.php';
+      var link = 'http://localhost:8080/myApp/Teacher/Attliststudents.php';
     
-               $http.post(link, {user_id : userid,batch:batch,section:section}).then(function (res){
+               $http.post(link, {user_id : userid,batch:batch,section:section,course:course,program:program,semester:semester}).then(function (res){
                    
                  
     
@@ -35,20 +35,20 @@ App.controller('Addattendence', function($scope, $http, $state,attendence) {
     
    
     
-    $scope.addattendence=function(x,data){
+    $scope.addattendence=function(x,data,date){
         var rollnumber = x.rollnumber
         
         var status = data;
+        var date = date;
+        var course=$stateParams.course;
         attendence1=new Array();
-          var section1 = sessionStorage.getItem('Attsection');
-     var batch1 = sessionStorage.getItem('Attbatch'); 
-        var date = $scope.date1;
+         
       
         var attendence = [
   {rollnumber:rollnumber
    , status: status,
-   section:section1,
-   batch:batch1,
+  course:course,
+
   date:date}
  
 ];
@@ -58,7 +58,7 @@ App.controller('Addattendence', function($scope, $http, $state,attendence) {
    
              
     
-      var link = 'http://localhost:8080/myApp/attendence.php';
+      var link = 'http://localhost:8080/myApp/Teacher/attendence.php';
     
                $http.post(link, {user_id : userid,attendence:attendence1}).then(function (res){
                    
